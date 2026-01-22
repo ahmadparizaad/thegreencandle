@@ -220,6 +220,8 @@ export default function TermsPage() {
                                 If you have any questions about these Terms and Conditions, please contact us:
                             </p>
                             <ul className="list-disc pl-6">
+                                <li>Vasundhra Infrasol</li>
+                                <li>Phone: 9713101521</li>
                                 <li>Email: thegreencandle30@gmail.com</li>
                             </ul>
                         </section>

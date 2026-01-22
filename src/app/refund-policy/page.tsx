@@ -85,6 +85,8 @@ export default function RefundPolicyPage() {
                                 If you have questions about this Refund Policy, please contact us:
                             </p>
                             <ul className="list-disc pl-6">
+                                <li>Vasundhra Infrasol</li>
+                                <li>Phone: 9713101521</li>
                                 <li>Email: thegreencandle30@gmail.com</li>
                             </ul>
                         </section>
