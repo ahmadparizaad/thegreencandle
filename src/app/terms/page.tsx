@@ -14,10 +14,10 @@ export default function TermsPage() {
                         <section>
                             <h2 className="text-2xl font-bold text-black dark:text-white">1. Agreement to Terms</h2>
                             <p>
-                                By accessing or using The Green Candle platform ("Service"), you agree to be bound by these Terms and Conditions ("Terms"). If you disagree with any part of these terms, then you may not access the Service.
+                                By accessing or using The Green Candle platform (&quot;Service&quot;), you agree to be bound by these Terms and Conditions (&quot;Terms&quot;). If you disagree with any part of these terms, then you may not access the Service.
                             </p>
                             <p>
-                                These Terms apply to all visitors, users, and others who access or use the Service. By using or accessing the Service, you agree to be bound by these Terms. If you are using the Service on behalf of an entity, you represent that you are authorized to accept these Terms on that entity's behalf.
+                                These Terms apply to all visitors, users, and others who access or use the Service. By using or accessing the Service, you agree to be bound by these Terms. If you are using the Service on behalf of an entity, you represent that you are authorized to accept these Terms on that entity&apos;s behalf.
                             </p>
                         </section>
 
@@ -34,7 +34,7 @@ export default function TermsPage() {
                                 <li>Subscription-based premium services</li>
                             </ul>
                             <p>
-                                Our services are provided "as is" and we reserve the right to modify, suspend, or discontinue any part of the Service at any time.
+                                Our services are provided &quot;as is&quot; and we reserve the right to modify, suspend, or discontinue any part of the Service at any time.
                             </p>
                         </section>
 
@@ -164,7 +164,7 @@ export default function TermsPage() {
                         <section>
                             <h2 className="text-2xl font-bold text-black dark:text-white">11. Disclaimer</h2>
                             <p>
-                                The information on this Service is provided on an "as is" basis. To the fullest extent permitted by law, The Green Candle:
+                                The information on this Service is provided on an &quot;as is&quot; basis. To the fullest extent permitted by law, The Green Candle:
                             </p>
                             <ul className="list-disc pl-6">
                                 <li>Excludes all representations and warranties relating to this Service and its contents</li>
@@ -177,7 +177,7 @@ export default function TermsPage() {
                         <section>
                             <h2 className="text-2xl font-bold text-black dark:text-white">12. Indemnification</h2>
                             <p>
-                                You agree to defend, indemnify, and hold harmless The Green Candle and its licensee and licensors, and their employees, contractors, agents, officers and directors, from and against any and all claims, damages, obligations, losses, liabilities, costs or debt, and expenses (including but not limited to attorney's fees), resulting from or arising out of:
+                                You agree to defend, indemnify, and hold harmless The Green Candle and its licensee and licensors, and their employees, contractors, agents, officers and directors, from and against any and all claims, damages, obligations, losses, liabilities, costs or debt, and expenses (including but not limited to attorney&quot;s fees), resulting from or arising out of:
                             </p>
                             <ul className="list-disc pl-6">
                                 <li>Your use and access of the Service</li>
@@ -190,10 +190,10 @@ export default function TermsPage() {
                         <section>
                             <h2 className="text-2xl font-bold text-black dark:text-white">13. Governing Law and Dispute Resolution</h2>
                             <p>
-                                These Terms shall be interpreted and governed by the laws of [Your Jurisdiction], without regard to conflict of law provisions.
+                                These Terms shall be interpreted and governed by the laws of India, without regard to conflict of law provisions.
                             </p>
                             <p>
-                                Any disputes arising from these Terms or your use of the Service will be resolved through binding arbitration in accordance with the rules of [Arbitration Organization].
+                                Any disputes arising from these Terms or your use of the Service will be resolved through binding arbitration in accordance with the rules of the Arbitration and Conciliation Act, 1996.
                             </p>
                         </section>
 
