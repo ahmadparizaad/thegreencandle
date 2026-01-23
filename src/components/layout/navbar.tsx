@@ -17,11 +17,14 @@ export function Navbar() {
                     <Link href="/#features" className="text-sm font-medium text-foreground dark:text-white hover:text-primary transition-colors">
                         Features
                     </Link>
+                    <Link href="/#pricing" className="text-sm font-medium text-foreground dark:text-white hover:text-primary transition-colors">
+                        Pricing
+                    </Link>
                     <Link href="/#about" className="text-sm font-medium text-foreground dark:text-white hover:text-primary transition-colors">
                         About
                     </Link>
                 </div>
-                <Link href="/#cta">
+                <Link href="https://wa.me/919713101521?text=Hi" target="_blank" rel="noopener noreferrer">
                     <Button size="sm" className="rounded-full px-4 py-2 bg-green-600 text-white hover:bg-green-500 dark:bg-green-600 dark:text-white dark:hover:bg-green-500 dark:hover:text-white">
                         Get Started
                     </Button>

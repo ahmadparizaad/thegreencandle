@@ -1,19 +1,24 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
+
+import { useMemo } from "react";
 
 function FloatingPaths({ position }: { position: number }) {
-    const paths = Array.from({ length: 36 }, (_, i) => ({
-        id: i,
-        d: `M-${380 - i * 5 * position} -${189 + i * 6}C-${380 - i * 5 * position
-            } -${189 + i * 6} -${312 - i * 5 * position} ${216 - i * 6} ${152 - i * 5 * position
-            } ${343 - i * 6}C${616 - i * 5 * position} ${470 - i * 6} ${684 - i * 5 * position
-            } ${875 - i * 6} ${684 - i * 5 * position} ${875 - i * 6}`,
-        color: `rgba(15,23,42,${0.1 + i * 0.03})`,
-        width: 0.5 + i * 0.03,
-    }));
+    const paths = useMemo(
+        () =>
+            Array.from({ length: 36 }, (_, i) => ({
+                id: i,
+                d: `M-${380 - i * 5 * position} -${189 + i * 6}C-${380 - i * 5 * position
+                    } -${189 + i * 6} -${312 - i * 5 * position} ${216 - i * 6} ${152 - i * 5 * position
+                    } ${343 - i * 6}C${616 - i * 5 * position} ${470 - i * 6} ${684 - i * 5 * position
+                    } ${875 - i * 6} ${684 - i * 5 * position} ${875 - i * 6}`,
+                color: `rgba(15,23,42,${0.1 + i * 0.03})`,
+                width: 0.5 + i * 0.03,
+                duration: 20 + ((i * 7) % 10),
+            })),
+        [position]
+    );
 
     return (
         <div className="absolute inset-0 pointer-events-none">
@@ -37,7 +42,7 @@ function FloatingPaths({ position }: { position: number }) {
                             pathOffset: [0, 1, 0],
                         }}
                         transition={{
-                            duration: 20 + Math.random() * 10,
+                            duration: path.duration,
                             repeat: Number.POSITIVE_INFINITY,
                             ease: "linear",
                         }}
@@ -89,7 +94,7 @@ export function BackgroundPaths({
                                             damping: 25,
                                         }}
                                         className="inline-block text-transparent bg-clip-text 
-                                        bg-gradient-to-r from-emerald-600 to-green-500 
+                                        bg-linear-to-r from-emerald-600 to-green-500 
                                         dark:from-emerald-400 dark:to-green-300"
                                     >
                                         {letter}
@@ -100,11 +105,11 @@ export function BackgroundPaths({
                     </h1>
 
                     <div
-                        className="inline-block group relative bg-gradient-to-b from-black/10 to-white/10 
+                        className="inline-block group relative bg-linear-to-b from-black/10 to-white/10 
                         dark:from-white/10 dark:to-black/10 p-px rounded-2xl backdrop-blur-lg 
                         overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
                     >
-                        <Link href="#features">
+                        {/* <Link href="#features">
                             <Button
                                 variant="ghost"
                                 className="rounded-[1.15rem] px-8 py-6 text-lg font-semibold backdrop-blur-md 
@@ -123,7 +128,7 @@ export function BackgroundPaths({
                                     →
                                 </span>
                             </Button>
-                        </Link>
+                        </Link> */}
                     </div>
                 </motion.div>
             </div>

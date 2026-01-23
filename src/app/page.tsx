@@ -4,7 +4,7 @@ import { Footer } from "@/components/layout/footer";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Image from "next/image";
-import { BarChart3, Shield, Zap, TrendingUp } from "lucide-react";
+import { BarChart3, Shield, Zap, TrendingUp, Check } from "lucide-react";
 
 export default function Home() {
   return (
@@ -51,6 +51,62 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Pricing Section */}
+      <section id="pricing" className="py-24 md:py-32">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="mb-16 text-center">
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl text-black dark:text-white">
+              Subscription Plans
+            </h2>
+            <p className="mt-4 text-neutral-600 dark:text-neutral-400 md:text-lg">
+              Unlock professional trading signals and targets tailored to your goals.
+            </p>
+          </div>
+
+          <div className="grid gap-8 lg:grid-cols-3">
+            <PricingCard
+              title="Regular"
+              price="₹990"
+              period="/ day"
+              description="Reliable signals with essential targets for consistent trading."
+              features={[
+                "Entry, Stop Loss & 2 Target Prices",
+                "Daily Market Calls",
+                "Weekly Plan: ₹4,000"
+              ]}
+              message="Hi, I am interested in buying the Regular subscription plan."
+            />
+            <PricingCard
+              title="Premium"
+              price="₹2,000"
+              period="/ day"
+              highlighted={true}
+              description="Maximum precision with all targets for serious market players."
+              features={[
+                "Entry, Stop Loss & All 6 Target Prices",
+                "Daily Market Calls",
+                "Priority Support Access",
+                "Weekly Plan: ₹9,000"
+              ]}
+              message="Hi, I am interested in buying the Premium plan subscription plan."
+            />
+            <PricingCard
+              title="International"
+              price="$120"
+              period="/ day"
+              description="Global market coverage for our international community."
+              features={[
+                "Global Market Insights",
+                "All 6 Target Prices",
+                "24/7 Premium Support",
+                "Exclusive Multi-market Analysis"
+              ]}
+              message="Hi, I am interested in buying the International subscription plan."
+            />
+          </div>
+        </div>
+      </section>
+
       {/* About Section */}
       <section id="about" className="py-24 md:py-32 bg-neutral-50 dark:bg-neutral-900/50">
         <div className="container mx-auto px-4 md:px-6">
@@ -73,7 +129,7 @@ export default function Home() {
                 fill
                 className="object-cover transition-transform duration-500 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+              <div className="absolute inset-0 bg-linear-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                 <p className="text-white text-sm font-medium">Professional instruments for precision trading.</p>
               </div>
             </div>
@@ -87,18 +143,13 @@ export default function Home() {
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
             Ready to start your journey?
           </h2>
-          <p className="mx-auto mt-4 max-w-[600px] opacity-80 md:text-lg">
+          <p className="mx-auto mt-4 max-w-150 opacity-80 md:text-lg">
             Join thousands of traders who are already using The Green Candle to master the markets.
           </p>
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <Link href="#">
+            <Link href="https://wa.me/919713101521?text=Hi" target="_blank" rel="noopener noreferrer">
               <Button size="lg" variant="secondary" className="px-8">
                 Get Started Now
-              </Button>
-            </Link>
-            <Link href="mailto:contact@thegreencandle.com">
-              <Button size="lg" variant="outline" className="px-8 text-white border-white/20 hover:bg-white/10 dark:border-black/20 dark:hover:bg-black/70">
-                Contact Sales
               </Button>
             </Link>
           </div>
@@ -119,3 +170,57 @@ function FeatureCard({ icon, title, description }: { icon: React.ReactNode, titl
     </div>
   );
 }
+
+function PricingCard({ 
+  title, 
+  price, 
+  period, 
+  description, 
+  features,
+  message, 
+  highlighted = false 
+}: { 
+  title: string, 
+  price: string, 
+  period: string, 
+  description: string, 
+  features: string[],
+  message?: string,
+  highlighted?: boolean
+}) {
+  return (
+    <div className={`group relative overflow-hidden rounded-2xl border p-8 transition-all hover:shadow-xl ${
+      highlighted 
+        ? 'border-neutral-900 bg-neutral-900 text-white dark:border-white dark:bg-white dark:text-black' 
+        : 'border-neutral-200 bg-white dark:border-neutral-700 dark:bg-neutral-900'
+    }`}>
+      <h3 className={`mb-2 text-2xl font-bold ${highlighted ? 'text-white dark:text-black' : 'text-neutral-900 dark:text-white'}`}>
+        {title}
+      </h3>
+      <div className="mb-4">
+        <span className="text-4xl font-bold">{price}</span>
+        <span className={`text-sm ml-1 ${highlighted ? 'opacity-80' : 'text-neutral-600 dark:text-neutral-400'}`}>{period}</span>
+      </div>
+      <p className={`mb-6 text-sm ${highlighted ? 'opacity-80' : 'text-neutral-600 dark:text-neutral-400'}`}>
+        {description}
+      </p>
+      <ul className="mb-8 space-y-3">
+        {features.map((feature, index) => (
+          <li key={index} className="flex items-center text-sm">
+            <Check className={`mr-2 h-4 w-4 shrink-0 ${highlighted ? 'text-white dark:text-black' : 'text-neutral-900 dark:text-white'}`} />
+            <span className={highlighted ? 'opacity-90' : 'text-neutral-600 dark:text-neutral-400'}>{feature}</span>
+          </li>
+        ))}
+      </ul>
+      <Link href={`https://wa.me/919713101521?text=${encodeURIComponent(message || "")}`} target="_blank" rel="noopener noreferrer" className="block w-full">
+        <Button 
+          variant={highlighted ? "secondary" : "default"} 
+          className={`w-full ${highlighted ? 'bg-white text-black hover:bg-neutral-200 dark:bg-black dark:text-white dark:hover:bg-neutral-800' : ''}`}
+        >
+          Get Started
+        </Button>
+      </Link>
+    </div>
+  );
+}
+
