@@ -141,8 +141,8 @@ export default function Home() {
 
       {/* Contact Section */}
       <section id="contact" className="py-24 md:py-32">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="mx-auto max-w-5xl">
+        <div className="container mx-auto px-20 py-20 md:px-20">
+          <div className="mx-auto max-w-7xl">
             <ContactCard
               title="Get in Touch"
               description="Have questions about our market insights or need help getting started? Fill out the form and we'll get back to you soon."

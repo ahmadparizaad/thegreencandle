@@ -2,7 +2,6 @@ import React from 'react';
 import { cn } from '@/lib/utils';
 import {
     LucideIcon,
-    PlusIcon,
 } from 'lucide-react';
 
 type ContactInfoProps = React.ComponentProps<'div'> & {
@@ -37,12 +36,8 @@ export function ContactCard({
             )}
             {...props}
         >
-            <PlusIcon className="absolute -top-3 -left-3 h-6 w-6" />
-            <PlusIcon className="absolute -top-3 -right-3 h-6 w-6" />
-            <PlusIcon className="absolute -bottom-3 -left-3 h-6 w-6" />
-            <PlusIcon className="absolute -right-3 -bottom-3 h-6 w-6" />
             <div className="flex flex-col justify-between lg:col-span-2">
-                <div className="relative h-full space-y-4 px-4 py-8 md:p-8">
+                <div className="relative h-full space-y-4 px-4 py-12 md:px-12">
                     <h1 className="text-3xl font-bold md:text-4xl lg:text-5xl">
                         {title}
                     </h1>

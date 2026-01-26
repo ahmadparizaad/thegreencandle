@@ -65,7 +65,7 @@ export function ContactForm() {
     }
 
     return (
-        <form onSubmit={handleSubmit} className="w-full space-y-4">
+        <form onSubmit={handleSubmit} className="w-full space-y-4 px-4 py-8">
             <div className="flex flex-col gap-2">
                 <Label htmlFor="name">Name</Label>
                 <Input
