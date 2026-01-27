@@ -75,7 +75,7 @@ function ContactInfo({
     return (
         <div className={cn('flex items-center gap-2 py-1', className)} {...props}>
             <div className="bg-green-300/10 rounded-lg p-3">
-                <Icon className="h-5 w-5 text-green-500" />
+                <Icon className="h-5 w-5 text-green-600 dark:text-green-500" />
             </div>
             <div>
                 {/* <p className="font-medium hover:text-green-500 transition-colors">{value}</p> */}
