@@ -117,7 +117,7 @@ This message was sent from The Green Candle website contact form.
                         Hi ${name},
                     </p>
                     <p style="line-height: 1.6; color: #555;">
-                        Thank you for contacting The Green Candle. We have received your message and will get back to you within 1 business day.
+                        Thank you for contacting The Green Candle. We have received your message and will get back to you soon.
                     </p>
                     <div style="background: #f9f9f9; padding: 15px; border-radius: 8px; margin: 20px 0;">
                         <h4 style="margin: 0 0 10px 0; color: #333;">Your message:</h4>
@@ -140,7 +140,7 @@ This message was sent from The Green Candle website contact form.
             text: `
 Hi ${name},
 
-Thank you for contacting The Green Candle. We have received your message and will get back to you within 1 business day.
+Thank you for contacting The Green Candle. We have received your message and will get back to you soon.
 
 Your message:
 ${message}

@@ -9,11 +9,35 @@ import { Textarea } from '@/components/ui/textarea';
 export function ContactForm() {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [submitted, setSubmitted] = useState(false);
+    const [errors, setErrors] = useState<Record<string, string>>({});
+
+    const validate = (data: { name: string; email: string; phone: string; message: string }) => {
+        const newErrors: Record<string, string> = {};
+
+        if (!data.name || data.name.length < 2) {
+            newErrors.name = 'Name must be at least 2 characters';
+        }
+
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!data.email || !emailRegex.test(data.email)) {
+            newErrors.email = 'Please enter a valid email address';
+        }
+
+        const phoneRegex = /^\+?[\d\s-]{10,}$/;
+        if (data.phone && !phoneRegex.test(data.phone)) {
+            newErrors.phone = 'Please enter a valid phone number';
+        }
+
+        if (!data.message || data.message.length < 10) {
+            newErrors.message = 'Message must be at least 10 characters';
+        }
+
+        return newErrors;
+    };
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        setIsSubmitting(true);
-
+        
         const formData = new FormData(e.currentTarget);
         const data = {
             name: formData.get('name') as string,
@@ -21,6 +45,15 @@ export function ContactForm() {
             phone: formData.get('phone') as string,
             message: formData.get('message') as string,
         };
+
+        const validationErrors = validate(data);
+        if (Object.keys(validationErrors).length > 0) {
+            setErrors(validationErrors);
+            return;
+        }
+
+        setErrors({});
+        setIsSubmitting(true);
 
         try {
             const response = await fetch('/api/contact', {
@@ -51,7 +84,7 @@ export function ContactForm() {
                     Thank you for your message!
                 </p>
                 <p className="text-sm text-muted-foreground mt-2">
-                    We&apos;ll get back to you within 1 business day.
+                    We&apos;ll get back to you soon.
                 </p>
                 <Button
                     className="mt-4"
@@ -74,7 +107,14 @@ export function ContactForm() {
                     type="text"
                     required
                     placeholder="Your name"
+                    className={errors.name ? "border-red-500" : ""}
+                    onChange={() => {
+                        if (errors.name) {
+                            setErrors(prev => ({ ...prev, name: '' }));
+                        }
+                    }}
                 />
+                {errors.name && <p className="text-xs text-red-500">{errors.name}</p>}
             </div>
             <div className="flex flex-col gap-2">
                 <Label htmlFor="email">Email</Label>
@@ -84,7 +124,14 @@ export function ContactForm() {
                     type="email"
                     required
                     placeholder="your@email.com"
+                    className={errors.email ? "border-red-500" : ""}
+                    onChange={() => {
+                        if (errors.email) {
+                            setErrors(prev => ({ ...prev, email: '' }));
+                        }
+                    }}
                 />
+                {errors.email && <p className="text-xs text-red-500">{errors.email}</p>}
             </div>
             <div className="flex flex-col gap-2">
                 <Label htmlFor="phone">Phone</Label>
@@ -93,7 +140,14 @@ export function ContactForm() {
                     name="phone"
                     type="tel"
                     placeholder="+91 XXXXX XXXXX"
+                    className={errors.phone ? "border-red-500" : ""}
+                    onChange={() => {
+                        if (errors.phone) {
+                            setErrors(prev => ({ ...prev, phone: '' }));
+                        }
+                    }}
                 />
+                {errors.phone && <p className="text-xs text-red-500">{errors.phone}</p>}
             </div>
             <div className="flex flex-col gap-2">
                 <Label htmlFor="message">Message</Label>
@@ -102,7 +156,14 @@ export function ContactForm() {
                     name="message"
                     required
                     placeholder="How can we help you?"
+                    className={errors.message ? "border-red-500" : ""}
+                    onChange={() => {
+                        if (errors.message) {
+                            setErrors(prev => ({ ...prev, message: '' }));
+                        }
+                    }}
                 />
+                {errors.message && <p className="text-xs text-red-500">{errors.message}</p>}
             </div>
             <Button className="w-full" type="submit" disabled={isSubmitting}>
                 {isSubmitting ? 'Sending...' : 'Submit'}

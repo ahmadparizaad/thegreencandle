@@ -21,7 +21,7 @@ type ContactCardProps = React.ComponentProps<'div'> & {
 
 export function ContactCard({
     title = 'Contact With Us',
-    description = 'If you have any questions regarding our Services or need help, please fill out the form here. We do our best to respond within 1 business day.',
+    description = 'If you have any questions regarding our Services or need help, please fill out the form here. We do our best to respond  day.',
     contactInfo,
     className,
     formSectionClassName,
@@ -31,7 +31,7 @@ export function ContactCard({
     return (
         <div
             className={cn(
-                'bg-card border relative grid h-full w-full shadow md:grid-cols-2 lg:grid-cols-3',
+                'bg-card border relative grid h-full w-full shadow grid-cols-1 md:grid-cols-2 lg:grid-cols-3',
                 className,
             )}
             {...props}
