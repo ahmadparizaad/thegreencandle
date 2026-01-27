@@ -100,14 +100,14 @@ export function ContactForm() {
     return (
         <form onSubmit={handleSubmit} className="w-full space-y-4 px-4 py-8">
             <div className="flex flex-col gap-2">
-                <Label htmlFor="name">Name</Label>
+                <Label htmlFor="name" className="text-white dark:text-neutral-100">Name</Label>
                 <Input
                     id="name"
                     name="name"
                     type="text"
                     required
                     placeholder="Your name"
-                    className={errors.name ? "border-red-500" : ""}
+                    className={`bg-gray-50 dark:bg-neutral-950 text-neutral-900 dark:text-neutral-100 border-neutral-200 dark:border-neutral-800 placeholder:text-neutral-500 ${errors.name ? "border-red-500" : ""}`}
                     onChange={() => {
                         if (errors.name) {
                             setErrors(prev => ({ ...prev, name: '' }));
@@ -117,14 +117,14 @@ export function ContactForm() {
                 {errors.name && <p className="text-xs text-red-500">{errors.name}</p>}
             </div>
             <div className="flex flex-col gap-2">
-                <Label htmlFor="email">Email</Label>
+                <Label htmlFor="email" className="text-white dark:text-neutral-100">Email</Label>
                 <Input
                     id="email"
                     name="email"
                     type="email"
                     required
                     placeholder="your@email.com"
-                    className={errors.email ? "border-red-500" : ""}
+                    className={`bg-gray-50 dark:bg-neutral-950 text-neutral-900 dark:text-neutral-100 border-neutral-200 dark:border-neutral-800 placeholder:text-neutral-500 ${errors.email ? "border-red-500" : ""}`}
                     onChange={() => {
                         if (errors.email) {
                             setErrors(prev => ({ ...prev, email: '' }));
@@ -134,13 +134,13 @@ export function ContactForm() {
                 {errors.email && <p className="text-xs text-red-500">{errors.email}</p>}
             </div>
             <div className="flex flex-col gap-2">
-                <Label htmlFor="phone">Phone</Label>
+                <Label htmlFor="phone" className="text-white dark:text-neutral-100">Phone</Label>
                 <Input
                     id="phone"
                     name="phone"
                     type="tel"
                     placeholder="+91 XXXXX XXXXX"
-                    className={errors.phone ? "border-red-500" : ""}
+                    className={`bg-gray-50 dark:bg-neutral-950 text-neutral-900 dark:text-neutral-100 border-neutral-200 dark:border-neutral-800 placeholder:text-neutral-500 ${errors.phone ? "border-red-500" : ""}`}
                     onChange={() => {
                         if (errors.phone) {
                             setErrors(prev => ({ ...prev, phone: '' }));
@@ -150,13 +150,13 @@ export function ContactForm() {
                 {errors.phone && <p className="text-xs text-red-500">{errors.phone}</p>}
             </div>
             <div className="flex flex-col gap-2">
-                <Label htmlFor="message">Message</Label>
+                <Label htmlFor="message" className="text-white dark:text-neutral-100">Message</Label>
                 <Textarea
                     id="message"
                     name="message"
                     required
                     placeholder="How can we help you?"
-                    className={errors.message ? "border-red-500" : ""}
+                    className={`bg-gray-50 dark:bg-neutral-950 text-neutral-900 dark:text-neutral-100 border-neutral-200 dark:border-neutral-800 placeholder:text-neutral-500 ${errors.message ? "border-red-500" : ""}`}
                     onChange={() => {
                         if (errors.message) {
                             setErrors(prev => ({ ...prev, message: '' }));
@@ -165,7 +165,7 @@ export function ContactForm() {
                 />
                 {errors.message && <p className="text-xs text-red-500">{errors.message}</p>}
             </div>
-            <Button className="w-full" type="submit" disabled={isSubmitting}>
+            <Button className="w-full bg-gray-100 text-neutral-900 hover:bg-white dark:bg-gray-50 dark:text-neutral-900 dark:hover:bg-gray-50" type="submit" disabled={isSubmitting}>
                 {isSubmitting ? 'Sending...' : 'Submit'}
             </Button>
         </form>

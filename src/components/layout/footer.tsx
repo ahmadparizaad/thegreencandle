@@ -26,7 +26,10 @@ export function Footer() {
                         </Link>
                         <p className="mt-4 max-w-xs text-sm text-neutral-500 dark:text-neutral-400">
                             Empowering learners with market knowledge and insights for informed investment understanding.
+                            <br /><br />
+                            GST No: 23AEOPJ3114J1ZO 
                         </p>
+
                     </div>
                     <div>
                         <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider">Product</h3>

@@ -31,20 +31,20 @@ export function ContactCard({
     return (
         <div
             className={cn(
-                'bg-card border relative grid h-full w-full shadow grid-cols-1 md:grid-cols-2 lg:grid-cols-3',
+                'bg-card border relative grid h-full w-full shadow grid-cols-1 md:grid-cols-2 lg:grid-cols-3 overflow-hidden',
                 className,
             )}
             {...props}
         >
             <div className="flex flex-col justify-between lg:col-span-2">
                 <div className="relative h-full space-y-4 px-4 py-12 md:px-12">
-                    <h1 className="text-3xl font-bold md:text-4xl lg:text-5xl">
+                    <h1 className="text-3xl font-bold md:text-4xl lg:text-5xl text-neutral-950 dark:text-neutral-50">
                         {title}
                     </h1>
                     <p className="text-muted-foreground max-w-xl text-sm md:text-base lg:text-lg">
                         {description}
                     </p>
-                    <h1 className='font-bold'>Vasundhara Infrasol</h1>
+                    <h1 className='font-bold text-neutral-900 dark:text-neutral-100'>Vasundhara Infrasol</h1>
                     <div className="grid gap-4 md:grid grid-cols-1">
                         {contactInfo?.map((info, index) => (
                             <ContactInfo key={index} {...info} />
@@ -54,7 +54,7 @@ export function ContactCard({
             </div>
             <div
                 className={cn(
-                    'bg-muted/40 flex h-full w-full items-center border-t p-5 md:col-span-1 md:border-t-0 md:border-l',
+                    'bg-neutral-800 dark:bg-muted/40 flex h-full w-full items-center border-t p-5 md:col-span-1 md:border-t-0 md:border-l',
                     formSectionClassName,
                 )}
             >
@@ -82,12 +82,12 @@ function ContactInfo({
                 {href ? (
                     <a
                         href={href}
-                        className="font-medium hover:text-green-500 transition-colors"
+                        className="font-medium text-neutral-900 dark:text-neutral-100 hover:text-green-600 dark:hover:text-green-400 transition-colors"
                     >
                         {value}
                     </a>
                 ) : (
-                    <p className="font-medium">{value}</p>
+                    <p className="font-medium text-neutral-900 dark:text-neutral-100">{value}</p>
                 )}
             </div>
         </div>
