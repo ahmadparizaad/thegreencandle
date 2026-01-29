@@ -62,10 +62,10 @@ export default function Home() {
                 Our Mission
               </h2>
               <p className="text-neutral-600 dark:text-neutral-400 text-lg mb-6">
-                At The Green Candle, we believe that everyone interested in the share market deserves access to comprehensive educational resources and market insights. Our platform is built to provide knowledge about markets, with a focus on speed, accuracy, and ease of use.
+                At The Green Candle, our mission is to simplify the complexities of the market through structured educational resources. We provide learners with a dedicated framework to understand market dynamics, technical patterns, and structural analysis, fostering deeper technical literacy in global markets.
               </p>
               <p className="text-neutral-600 dark:text-neutral-400 text-lg">
-                Whether you&apos;re just starting out or you&apos;re a seasoned market enthusiast, we provide the data and insights you need to understand the markets with confidence.
+                We believe that knowledge is the strongest foundation. Our platform is dedicated to guiding market enthusiasts through their learning journey, providing the analytical case studies and theoretical insights needed to understand market behavior with clarity.
               </p>
             </div>
             <div className="relative aspect-video rounded-2xl overflow-hidden border border-neutral-200 dark:border-neutral-800 shadow-2xl group">
@@ -102,8 +102,8 @@ export default function Home() {
               period="/ day"
               description="Foundational market study cases and key data points for steady learning."
               features={[
-                "Study Case: Entry & Exit Analysis",
-                "Daily Market Learning Insights",
+                // "Study Case: Entry & Exit Analysis",
+                // "Daily Market Learning Insights",
                 "Weekly Education Plan: ₹4,000"
               ]}
               message="Hi, I am interested in buying the Regular subscription plan."
@@ -115,9 +115,9 @@ export default function Home() {
               highlighted={true}
               description="Extended analysis and advanced strategies for dedicated market enthusiasts."
               features={[
-                "Advanced Strategy: Multi-Level Analysis",
-                "Daily Market Learning Insights",
-                "Priority Educational Support",
+                // "Advanced Strategy: Multi-Level Analysis",
+                // "Daily Market Learning Insights",
+                // "Priority Educational Support",
                 "Weekly Education Plan: ₹9,000"
               ]}
               message="Hi, I am interested in buying the Premium plan subscription plan."
@@ -128,10 +128,10 @@ export default function Home() {
               period="/ day"
               description="Global market case studies and advanced analysis for our international learning community."
               features={[
-                "Global Market Learning Modules",
-                "Advanced Analysis Models",
-                "24/7 Premium Support",
-                "Exclusive Multi-market Analysis"
+                // "Global Market Learning Modules",
+                // "Advanced Analysis Models",
+                // "24/7 Premium Support",
+                "Weekly Education Plan: $600"
               ]}
               message="Hi, I am interested in buying the International subscription plan."
             />
