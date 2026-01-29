@@ -31,23 +31,23 @@ export default function Home() {
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
             <FeatureCard
               icon={<BarChart3 className="h-10 w-10 text-black dark:text-white" />}
-              title="Real-time Analytics"
-              description="Get instant updates on market movements with our low-latency data engine."
+              title="Strategy Analysis"
+              description="Learn to deconstruct market setups and understand the technical patterns behind movements."
             />
             <FeatureCard
               icon={<Shield className="h-10 w-10 text-black dark:text-white" />}
               title="Secure Platform"
-              description="Your data and information are protected by industry-leading security protocols."
+              description="Your educational progress and data are protected by industry-leading security."
             />
             <FeatureCard
               icon={<Zap className="h-10 w-10 text-black dark:text-white" />}
-              title="Real-Time Updates"
-              description="Receive market insights instantly with our optimized infrastructure."
+              title="Daily Breakdowns"
+              description="Receive daily educational observations on market trends and structural shifts."
             />
             <FeatureCard
               icon={<TrendingUp className="h-10 w-10 text-black dark:text-white" />}
-              title="Advanced Insights"
-              description="Leverage AI-driven insights for your market learning journey."
+              title="Advanced Analysis"
+              description="Leverage deep technical insights to enhance your comprehensive market learning journey."
             />
           </div>
         </div>
@@ -65,7 +65,7 @@ export default function Home() {
                 At The Green Candle, we believe that everyone interested in the share market deserves access to comprehensive educational resources and market insights. Our platform is built to provide knowledge about markets, with a focus on speed, accuracy, and ease of use.
               </p>
               <p className="text-neutral-600 dark:text-neutral-400 text-lg">
-                Whether you&apos;re just starting out or you&apos;re a seasoned investor, we provide the data and insights you need to understand the markets with confidence.
+                Whether you&apos;re just starting out or you&apos;re a seasoned market enthusiast, we provide the data and insights you need to understand the markets with confidence.
               </p>
             </div>
             <div className="relative aspect-video rounded-2xl overflow-hidden border border-neutral-200 dark:border-neutral-800 shadow-2xl group">
@@ -100,11 +100,11 @@ export default function Home() {
               title="Regular"
               price="₹990"
               period="/ day"
-              description="Essential market insights with key data points for steady learning."
+              description="Foundational market study cases and key data points for steady learning."
               features={[
-                "Entry, Stop Loss & 2 Target Prices",
-                "Daily Market Insights",
-                "Weekly Plan: ₹4,000"
+                "Study Case: Entry & Exit Analysis",
+                "Daily Market Learning Insights",
+                "Weekly Education Plan: ₹4,000"
               ]}
               message="Hi, I am interested in buying the Regular subscription plan."
             />
@@ -113,12 +113,12 @@ export default function Home() {
               price="₹2,000"
               period="/ day"
               highlighted={true}
-              description="Comprehensive insights with all data points for dedicated market enthusiasts."
+              description="Extended analysis and advanced strategies for dedicated market enthusiasts."
               features={[
-                "Entry, Stop Loss & All 6 Target Prices",
-                "Daily Market Insights",
-                "Priority Support Access",
-                "Weekly Plan: ₹9,000"
+                "Advanced Strategy: Multi-Level Analysis",
+                "Daily Market Learning Insights",
+                "Priority Educational Support",
+                "Weekly Education Plan: ₹9,000"
               ]}
               message="Hi, I am interested in buying the Premium plan subscription plan."
             />
@@ -126,10 +126,10 @@ export default function Home() {
               title="International"
               price="$120"
               period="/ day"
-              description="Global market coverage for our international community."
+              description="Global market case studies and advanced analysis for our international learning community."
               features={[
-                "Global Market Insights",
-                "All 6 Target Prices",
+                "Global Market Learning Modules",
+                "Advanced Analysis Models",
                 "24/7 Premium Support",
                 "Exclusive Multi-market Analysis"
               ]}

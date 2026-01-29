@@ -25,7 +25,7 @@ export function Footer() {
                             THE GREEN CANDLE
                         </Link>
                         <p className="mt-4 max-w-xs text-sm text-neutral-500 dark:text-neutral-400">
-                            Empowering learners with market knowledge and insights for informed investment understanding.
+                            Empowering learners with market knowledge and insights for informed market understanding.
                             <br /><br />
                             GST No: 23AEOPJ3114J1ZO 
                         </p>
