@@ -124,14 +124,14 @@ export default function Home() {
             />
             <PricingCard
               title="International"
-              price="$120"
+              price="₹11,000"
               period="/ day"
               description="Global market case studies and advanced analysis for our international learning community."
               features={[
                 // "Global Market Learning Modules",
                 // "Advanced Analysis Models",
                 // "24/7 Premium Support",
-                "Weekly Education Plan: $600"
+                // "Weekly Education Plan: $600"
               ]}
               message="Hi, I am interested in buying the International subscription plan."
             />
@@ -229,7 +229,9 @@ function PricingCard({
         {title}
       </h3>
       <div className="mb-4">
-        <span className="text-4xl font-bold">{price}</span>
+        <span className={`text-4xl font-bold ${highlighted ? 'text-white dark:text-black' : 'text-neutral-900 dark:text-white'}`}>
+          {price}
+        </span>
         <span className={`text-sm ml-1 ${highlighted ? 'opacity-80' : 'text-neutral-600 dark:text-neutral-400'}`}>{period}</span>
       </div>
       <p className={`mb-6 text-sm ${highlighted ? 'opacity-80' : 'text-neutral-600 dark:text-neutral-400'}`}>
